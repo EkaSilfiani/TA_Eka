@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    margin: 10px;
+    padding: 0 0 20px;
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.container .box{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: black;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+} 
+
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    transform: 1s;
+}
+
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: 1s;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .box:hover .icon{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container .box .icon .fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: black;
+}
+
+.container .box:hover .icon .fa{
+    font-size: 40px;
+}
+
+.container .box .content{
+    position: relative;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    transition: 0.5s;
+    color: white;
+    box-sizing: border-box;
+}
+
+.container .box:hover .content{
+    top: 100px;
+    opacity: 1;
+}
+
+.container .box .content h3{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+
+.header span{
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    display:block;
+}
+
+.text1{
+    text-align:center;
+    font-size: 70px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 2s 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.text2{
+    font-size: 50px;
+    color: white;
+}
+
+
+@keyframes text{
+    0%{
+        color: black;
+        margin-bottom: -60px;
+    }
+    30%{
+        letter-spacing: 20px;
+        margin-bottom: -60px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -60px;
+    }
+}
