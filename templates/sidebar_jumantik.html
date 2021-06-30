@@ -1,0 +1,46 @@
+
+<section id="container">
+	<aside>
+		<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+			<div class="profile-sidebar">
+				<div class="profile-userpic">
+					<img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+				</div>
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">Jumantik {{ username }}</div>
+					<div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
+				</div>
+
+				<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">Surveilans Demam Berdarah Dengue</a>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+				<div class="divider"></div>
+				<form role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+				</form>
+		<ul class="nav menu">
+			<li>
+				<a href="{{url_for('datasurveijumantik')}}">
+					<em class="fa fa-clone">&nbsp;</em>Data Survei
+				</a>
+			</li>
+			<li>
+				<a href="{{url_for('file_sukses')}}">
+					<em class="fa fa-file-image-o">&nbsp;</em>File Foto
+				</a>
+			</li>
+			<li><a href="{{url_for('login')}}">
+				<em class="fa fa-power-off">&nbsp;</em>Logout
+			</a>
+		</li>
+		</ul>
+	</div>
+</aside>

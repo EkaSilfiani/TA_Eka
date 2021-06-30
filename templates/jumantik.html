@@ -1,0 +1,75 @@
+{% include "head.html" %}
+	<title>Data Jumantik</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+{% include "sidebar_kelurahan.html" %}
+	<section id="main-content">
+        <section class="wrapper">
+        	<div class="row mt">
+        		<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 main">
+        			<div class="container">
+	        			<div class="panel panel-container">
+	        				<div class="panel-group">
+	        					<div class="panel-default">
+	        						<div class="heading">
+	        							<div class="panel-body">
+	        								<legend><h2>Data Jumantik</h2></legend>
+	        								<div class="card-body">
+	        									<table class="table">
+		        									<thead>
+		        										<tr>
+		        											<th scope="col">ID Jumantik</th>
+		        											<th scope="col">Kode Desa</th>
+															<th scope="col">Nama</th>
+															<th scope="col">Alamat</th>
+															<th scope="col">No Telp</th>
+															<th scope="col">Jenis Kelamin</th>
+															<th scope="col">Area Kerja</th>
+															<th scope="col">Ubah</th>
+															<th scope="col">Hapus</th>
+														</tr>
+													</thead>
+													{% for baris in container %}
+													<tbody>
+														<tr>
+															<td>{{ baris[0] }}</td>
+															<td>{{ baris[1] }}</td>
+															<td>{{ baris[2] }}</td>
+															<td>{{ baris[3] }}</td>
+															<td>{{ baris[4] }}</td>
+															<td>{{ baris[5] }}</td>
+															<td>{{ baris[6] }}</td>
+															<td><a href="{{ url_for('update_jumantik', id_jumantik=baris[0]) }}">
+																<button class="btn btn-primary">Ubah</button>
+															</a>
+														</td>
+															<td><a href="{{ url_for('delete_jumantik', id_jumantik=baris[0]) }}">
+																<button class="btn btn-primary">Hapus</button>
+															</a>
+														</td>
+														</tr>
+													</tbody>
+												</div>
+													{% endfor %}
+													</table>
+													<p><a href="{{ url_for('insert_data_jumantik') }}">
+													<button class="btn btn-primary">Tambah Jumantik
+													</button>
+												</a>
+											</p>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</section>
+</body>
+</html>

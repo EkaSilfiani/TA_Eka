@@ -1,0 +1,79 @@
+{% include "head.html" %}
+	<title>Data Pasien DBD</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+{% include "sidebar_faskes.html" %}
+	<section id="main-content">
+        <section class="wrapper">
+        	<div class="row mt">
+        		<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 main">
+        			<div class="container">
+        				<br>
+	        			<div class="panel panel-container">
+	        				<div class="panel-group">
+	        					<div class="panel-default">
+	        						<div class="heading">
+	        							<div class="panel-body">
+	        								<legend><h2>Data Pasien DBD</h2></legend>
+	        								<div class="card-body">
+	        									<table class="table">
+		        									<thead>
+		        										<tr>
+		        											<th scope="col">No</th>
+															<th scope="col">Tanggal Masuk</th>
+															<th scope="col">No KTP</th>
+															<th scope="col">Nama Pasien</th>
+															<th scope="col">Alamat</th>
+															<th scope="col">Tempat Tanggal Lahir</th>
+															<th scope="col">Jenis Kelamin</th>
+															<th scope="col">Pekerjaan</th>
+															<th scope="col">Ubah</th>
+															<th scope="col">Hapus</th>
+														</tr>
+													</thead>
+													{% for baris in container %}
+													<tbody>
+														<tr>
+															<td>{{ baris[0] }}</td>
+															<td>{{ baris[1] }}</td>
+															<td>{{ baris[2] }}</td>
+															<td>{{ baris[3] }}</td>
+															<td>{{ baris[4] }}</td>
+															<td>{{ baris[5] }}</td>
+															<td>{{ baris[6] }}</td>
+															<td>{{ baris[7] }}</td>
+															<td><a href="{{ url_for('update', no=baris[0]) }}">
+																<button class="btn btn-primary">Ubah</button>
+															</a>
+														</td>
+															<td><a href="{{ url_for('delete', no=baris[0]) }}">
+																<button class="btn btn-primary">Hapus</button>
+															</a>
+														</td>
+														</tr>
+													</tbody>
+												</div>
+													{% endfor %}
+												</table>
+												<p>
+													<a href="{{ url_for('insert_data_pasien') }}">
+														<button class="btn btn-primary">Tambah Pasien DBD
+														</button>
+													</a>
+												</p>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+</body>
+</html>

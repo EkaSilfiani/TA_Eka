@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Ubah Survei</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-4.4.1-dist/css/bootstrap.min.css') }}">
+	<script src="{{ url_for('static', filename='bootstrap-4.4.1-dist/js/bootstrap.min.js') }}" type="text/javascript">
+	</script>
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+</head>
+<body>
+	<br>
+		<br>
+		<div class="square600">
+			<h2>Ubah Data Jumantik</h2>
+				<br>
+					<br>
+					<form action="{{ url_for('update_prosess_jumantik') }}" method="post">
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<label for="kode_desa">Kode Desa</label>
+								<input type="kode_desa" name="kode_desa" class="form-control" id="kode_desa" placeholder="Kode Desa"
+								value="{{ data[1] }}" size="30" maxlength="50" />
+							</div>
+							<div class="form-group col-md-12">
+								<label for="nama">Nama</label>
+								<input type="nama" name="nama" class="form-control" id="nama" placeholder="Nama"
+								value="{{ data[2] }}" size="30" maxlength="50" />
+							</div>
+							<div class="form-group col-md-12">
+								<label for="alamat">Alamat</label>
+								<input type="alamat" name="alamat" class="form-control" id="alamat" placeholder="Alamat"
+								value="{{ data[3] }}" size="30" maxlength="50" />
+							</div>
+							<div class="form-group col-md-12">
+								<label for="notelp">No Telp</label>
+								<input type="notelp" name="no_telp" class="form-control" id="notelp" placeholder="No Telp"
+								value="{{ data[4] }}" size="30" maxlength="50" />
+							</div>
+							<div class="form-group col-md-12">
+					    			<label for="jk">Jenis Kelamin</label>
+					     			<select id="jk" class="form-control" name="jenis_kelamin">
+					        		<option>Laki-Laki</option>
+					       			<option>Perempuan</option
+									value="{{data[5]}}" size="30" maxlength="50"/>
+								</option>
+							</select>
+						</div>
+							<div class="form-group col-md-12">
+								<label for="areakerja">Area Kerja</label>
+								<input type="areakerja" name="area_kerja" class="form-control" id="areakerja" placeholder="Area Kerja"
+								value="{{data[6]}}" size="30" maxlength="50"/>
+							</div>
+		        			<input type="hidden" name="id_jumantik" value="{{ data[0] }}" />
+		      				</select>
+						</div>
+						<button type="submit" class="btn btn-primary">Simpan</button>
+					</div>
+				</form>
+			</div>
+	</body>
+</html>

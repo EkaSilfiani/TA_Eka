@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include "head.html" %}
+	<title>Data Survei Jumantik</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+{% include "sidebar_faskes.html" %}
+	<section id="main-content">
+        <section class="wrapper">
+        	<div class="row mt">
+        		<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 main">
+        			<div class="container">
+	        			<div class="panel panel-container">
+	        				<div class="panel-group">
+	        					<div class="panel-default">
+	        						<div class="heading">
+	        							<div class="panel-body">
+	        								<legend><h2>Data Survei Jumantik</h2></legend>
+	        								<div class="card-body">
+	        									<table class="table">
+		        									<thead>
+		        										<tr>
+															<th scope="col">No</th>
+															<th scope="col">Tanggal Survei</th>
+															<th scope="col">Nama Jumantik</th>
+															<th scope="col">Nomor Kartu Keluarga</th>
+															<th scope="col">Nama Kepala Keluarga</th>
+															<th scope="col">No Telp</th>
+															<th scope="col">Alamat</th>
+															<th scope="col">Bak Mandi</th>
+															<th scope="col">Drum</th>
+															<th scope="col">Kaleng Bekas</th>
+															<th scope="col">Tempayan</th>
+															<th scope="col">Lain Lain</th>
+															<th scope="col">Status</th>
+															<th scope="col">Jumlah TPA</th>
+														</tr>
+														</thead>
+														{% for baris in container %}
+														<tbody>
+														<tr>
+															<td>{{ baris[0] }}</td>
+															<td>{{ baris[1] }}</td>
+															<td>{{ baris[2] }}</td>
+															<td>{{ baris[3] }}</td>
+															<td>{{ baris[4] }}</td>
+															<td>{{ baris[5] }}</td>
+															<td>{{ baris[6] }}</td>
+															<td>{{ baris[7] }}</td>
+															<td>{{ baris[8] }}</td>
+															<td>{{ baris[9] }}</td>
+															<td>{{ baris[10] }}</td>
+															<td>{{ baris[11] }}</td>
+															<td>{{ baris[12] }}</td>
+															<td>{{ baris[13] }}</td>
+														</td>
+														</tr>
+														</tbody>
+														</div>
+															{% endfor %}
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</body>
+</html>

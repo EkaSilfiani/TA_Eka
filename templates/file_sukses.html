@@ -1,0 +1,58 @@
+{% include "head.html" %}
+	<title>upload file</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	{% include "sidebar_jumantik.html" %}
+	<section id="main-content">
+        <section class="wrapper">
+        	<div class="row mt">
+        		<div class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 main">
+        			<div class="container">
+	        			<div class="panel panel-container">
+	        				<div class="panel-group">
+	        					<div class="panel-default">
+	        						<div class="heading">
+	        							<div class="panel-body">
+	        								<legend><h2>Data File Foto</h2></legend>
+	        								<div class="card-body">
+	        									<table class="table">
+		        									<thead>
+		        										<tr>
+		        											<th scope="col">No</th>
+		        											<th scope="col">Id Jumantik</th>
+		        											<th scope="col">Nama File</th>
+		        											<th scope="col">Tanggal Upload</th>
+		        										</tr>
+		        									</thead>
+		        										{%for baris in container%}
+		        										<tbody>
+		        										<tr>
+		        											<td>{{ baris[0] }}</td>
+		        											<td>{{ baris[1] }}</td>
+		        											<td>{{ baris[2] }}</td>
+		        											<td>{{ baris[3] }}</td>
+		        										</tr>
+		        									{%endfor%}
+		        								</table>
+		        								<p><a href="{{ url_for('upload') }}">
+		        									<button class="btn btn-primary">Tambah File
+		        									</button>
+		        								</a>
+		        							</p>
+		        						</thead>
+		        					</table>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+</section>
+</section>
+</body>
+</html>

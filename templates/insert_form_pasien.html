@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Pasien DBD</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-4.4.1-dist/css/bootstrap.min.css') }}">
+	<script src="{{ url_for('static', filename='bootstrap-4.4.1-dist/js/bootstrap.min.js') }}" type="text/javascript">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+	<br>
+		<br>
+		<div class="square600">
+			<h2>Form Pasien DBD</h2>
+			<br>
+				<br>
+				<form action="{{ url_for('insert_data_pasien') }}" method = "post" enctype="multipart/form-data">
+					<div class="form-group col--md-6">
+						<label for="no">No</label>
+						<input type="no" name="no" class="form-control" id="no" placeholder="No">
+					</div>
+					<div class="form-group col--md-7">
+						<label for="tanggalmasuk">Tanggal Masuk</label>
+						<input type="date" name="tanggal_masuk" class="form-control" id="tanggalmasuk" placeholder="Tahun/Bulan/Tanggal">
+					</div>
+					<div class="form-group col--md-8">
+						<label for="noktp">No KTP</label>
+						<input type="noktp" name="no_ktp" class="form-control" id="noktp" placeholder="Nomor KTP">
+					</div>
+					<div class="form-group col--md-9">
+						<label for="nama">Nama Pasien</label>
+						<input type="nama" name="nama_pasien" class="form-control" id="nama" placeholder="Nama Pasien">
+					</div>
+					<div class="form-group col--md-10">
+						<label for="alamat">Alamat</label>
+						<input type="alamat" name="alamat" class="form-control" id="alamat" placeholder="Alamat">
+					</div>
+					<div class="form-group col--md-11">
+						<label for="ttl">Tempat Tanggal Lahir</label>
+						<input type="ttl" name="tempat_tanggal_lahir" class="form-control" id="ttl" placeholder="Tempat Tanggal Lahir">
+					</div>
+					<div class="form-group col--md-12">
+		    			<label for="jk">Jenis Kelamin</label>
+		     			<select id="jk" class="form-control" name="jenis_kelamin">
+		        		<option>Laki-Laki</option>
+		        		<option>Perempuan</option>
+		        	</select>
+					</div>
+	        		<div class="form-group col--md-13">
+						<label for="pekerjaan">Pekerjaan</label>
+						<input type="pekerjaan" name="pekerjaan" class="form-control" id="pekerjaan" placeholder="Pekerjaan">
+					</div>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Save</button>
+					<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLongTitle">Data Disimpan</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">Data Berhasil Disimpan
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Oke</button>
+								</div>
+							</div>
+						</div>
+					</div>
+			</form>
+		</div>
+</body>
+</html>

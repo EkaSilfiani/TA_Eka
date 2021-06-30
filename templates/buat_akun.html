@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buat Akun</title>
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/datepicker3.css" rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+</head>
+
+<body id="contact" class="lang-en country-id currency-idr layout-left-column page-contact tax-display-disabled">
+    <main>
+        <aside id="notifications">
+            <div class="container"></div>
+        </aside>
+        
+        <section id="wrapper">
+            <div class="container">
+                
+                <div id="content-wrapper">
+                    <section id="main">
+                        <header class="page-header">
+                            <h1>Buat Akun Baru</h1>
+                        </header>
+                        <section id="content" class="page-content card card-block">
+                                <form action="{{url_for('buat_akun')}}" method="post">
+                                    <input type="hidden" name="id_user">
+                                    <section>
+                                        
+                                        <!--Nama-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Nama</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="nama" type="text" required="">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Nomor Telepon-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Nomor Telepon</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="no_telp" type="text" required="">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+
+                                     
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">username</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="username" type="text" required="" placeholder="username">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Password-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Password</label>
+                                            <div class="col-md-6">
+                                                <div class="input-group js-parent-focus">
+                                                    <input class="form-control js-child-focus js-visible-password" name="password" type="password" value="" required="" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+
+                                        <!--Alamat-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label required">Alamat</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="alamat" type="text" required="">
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                        <!--Tanggal Lahir-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label">Tanggal Lahir</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control" name="tanggal_lahir" type="date" placeholder="">
+                                                <span class="form-control-comment"></span>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                                        <!--Tipe-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label">Tipe Pengguna</label>
+                                            <div class="col-md-6">
+                                                <select id="level" class="form-control" name="level">
+                                                <option>faskes</option>
+                                                <option>kelurahan</option>
+                                                <option>jumantik</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!--Jenis Kelamin-->
+                                        <div class="form-group row ">
+                                            <label class="col-md-3 form-control-label">Jenis Kelamin</label>
+                                            <div class="col-md-6 form-control-valign">
+                                                <label class="radio-inline">
+                                                    <span class="custom-radio">
+                                                        <input name="jenis_kelamin" type="radio" value="Laki-laki">
+                                                        <span></span>
+                                                    </span>
+                                                    Laki-laki
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <span class="custom-radio">
+                                                        <input name="jenis_kelamin" type="radio" value="Perempuan">
+                                                        <span></span>
+                                                    </span>
+                                                    Perempuan
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3 form-control-comment"></div>
+                                        </div>
+                    
+                                    </section>
+                      
+                                    <footer class="form-footer clearfix">
+                                        <input type="hidden" name="submitCreate" value="1">
+                                        <button class="btn btn-primary form-control-submit pull-xs-right" type="submit">Save</button>
+                                    </footer>
+                                </form>
+                            </section>
+                        </section>
+                        <footer class="page-footer"> 
+                            <!-- Footer content -->
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

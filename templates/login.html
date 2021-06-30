@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selamat Datang</title>
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+	<link href="static/css/styles.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<body>    
+	<main>
+		<div class="row">
+			<div class="row text-center ">
+				<div class="col-md-12">
+					<br /><br />
+					<h2> Selamat Datang Di Sistem Informasi Surveilans</h2>
+					<h2>Demam Berdarah Dengue</h2>
+				</div>
+			</div>
+			<div class="container"></div>
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+				<section id="main">
+					<section id="content" class="page-content card-block">
+						<section class="login-form">
+							<form id="login-form" action="{{ url_for('login') }}" method="post" >
+								<section>
+									<div class="login-panel panel panel-default">
+										<div class="panel-heading">Log in</div>
+										<fieldset>
+											<div class="panel-body">
+												<div class="form-group">
+													<input class="form-control" placeholder="Username" name="username" type="username" required>
+												</div>
+												<div class="form-group">
+													<input class="form-control" placeholder="Password" name="password" type="password" required>
+												</div>
+												<div class="no-account" align="center">
+                                					<a href="{{ url_for('buat_akun') }}">Belum punya Akun? Daftar Disini</a>
+                          						</div>
+                          						<br>
+												<input type="hidden" name="submitLogin" value="1">
+												<button class="btn btn-primary" data-link-action="log-in" type="submit">Login</button>
+												{% if msg %}
+												<p style="color : red"> {{ msg }}</p>
+												{% endif %}
+											</div>
+										</fieldset>
+									</div>
+								</section>
+							</form>
+						</section>
+					</section>
+				</section>
+			</div>
+		</div>
+	</main>
+</body>
+</head>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Ubah Survei</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-4.4.1-dist/css/bootstrap.min.css') }}">
+	<script src="{{ url_for('static', filename='bootstrap-4.4.1-dist/js/bootstrap.min.js') }}" type="text/javascript">
+	</script>
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+</head>
+<body>
+	<br>
+		<br>
+		<div class="square600">
+		<h2>Ubah Data Form Survei</h2>
+			<br>
+				<br>
+				<form action="{{ url_for('update_prosess_survei') }}" method="post">
+					<div class="form-row">
+						<div class="form-group col--md-1">
+							<label for="tanggalsurvei">Tanggal Survei</label>
+							<input type="date" name="tanggal_survei" class="form-control" id="tanggalsurvei" placeholder="Tahun/Bulan/Tanggal"
+							value="{{ data[1] }}" size="30" maxlength="50" />
+						</div>
+						<div class="form-group col--md-2">
+							<label for="namajumantik">Nama Jumantik</label>
+							<input type="namajumantik" name="nama_jumantik" class="form-control" id="namajumantik" placeholder="Nama Jumantik"
+							value="{{ data[2] }}" size="30" maxlength="50" />
+						</div>
+						<div class="form-group col--md-3">
+							<label for="nokk">Nomor Kartu Keluarga</label>
+							<input type="namajumantik" name="no_kk" class="form-control" id="nokk" placeholder="Nomor Kartu Keluarga"
+							value="{{ data[3] }}" size="30" maxlength="50" />
+						</div>
+						<div class="form-group col--md-4">
+							<label for="namakepalakeluarga">Nama Kepala Keluarga</label>
+							<input type="namakepalakeluarga" name="nama_kepala_keluarga" class="form-control" id="namakepalakeluarga" placeholder="Nama Kepala Keluarga"
+							value="{{ data[4] }}" size="30" maxlength="50" />
+						</div>
+						<div class="form-group col--md-5">
+							<label for="notelp">No Telp</label>
+							<input type="notelp" name="no_telp" class="form-control" id="notelp" placeholder="No Telp"
+							value="{{ data[5] }}" size="30" maxlength="50" />
+						</div>
+						<div class="form-group col--md-6">
+							<label for="alamat">Alamat</label>
+							<input type="alamat" name="alamat" class="form-control" id="alamat" placeholder="Alamat"
+							value="{{data[6]}}" size="30" maxlength="50"/>
+						</div>
+						<div class="form-group col--md-7">
+							<label for="jumlahtpa">Jumlah TPA</label>
+							<input type="jumlahtpa" name="jumlah_tpa" class="form-control" id="jumlahtpa" placeholder="Jumlah TPA"
+							value="{{data[7]}}" size="30" maxlength="50"/>
+						</div>
+						<div class="form-group col--md-8">
+	    					<label for="status">Status</label>
+	     					<select id="status" class="form-control" name="status">
+	        				<option selected>Positif, Ya terdapat Jentik Nyamuk</option>
+	        				<option>Negativ, Tidak terdapat Jentik Nyamuk</option
+	        				value="{{data[7]}}" size="30" maxlength="50"/>
+	        			<input type="hidden" name="no" value="{{ data [0] }}" />
+	      				</select>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-primary">Simpan</button>
+			</form>
+		</div>
+</body>
+</html>

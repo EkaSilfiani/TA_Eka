@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Pasien DBD</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-4.4.1-dist/css/bootstrap.min.css') }}">
+	<script src="{{ url_for('static', filename='bootstrap-4.4.1-dist/js/bootstrap.min.js') }}" type="text/javascript">
+	</script>
+</head>
+<body>
+	<br>
+		<br>
+		<div class="square600">
+			<h2>Ubah Data Pasien DBD</h2>
+				<br>
+					<br>
+					<form action="{{ url_for('update_prosess') }}" method="post">
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<label for="tangalmasuk">Tanggal Masuk</label>
+								<input type="date" name="tanggal_masuk" class="form-control" id="tanggalmasuk" placeholder="Tahun/Bulan/Tanggal"
+								value="{{ data[1] }}" size="30" maxlength="50" />
+							</div>
+						<div class="form-group col-md-12">
+								<label for="noktp">No KTP</label>
+								<input type="noktp" name="no_ktp" class="form-control" id="noktp" placeholder="Nomor KTP"
+								value="{{ data[2] }}" size="30" maxlength="50" />
+							</div>
+						<div class="form-group col-md-12">
+								<label for="namapasien">Nama Pasien</label>
+								<input type="namapasien" name="nama_pasien" class="form-control" id="namapasien" placeholder="Nama Pasien"
+								value="{{ data[3] }}" size="30" maxlength="50" />
+							</div>
+						<div class="form-group col-md-12">
+								<label for="alamat">Alamat</label>
+								<input type="alamat" name="alamat" class="form-control" id="alamat" placeholder="Alamat"
+								value="{{ data[4] }}" size="30" maxlength="50" />
+							</div>
+						<div class="form-group col-md-12">
+								<label for="ttl">Tempat Tanggal Lahir</label>
+								<input type="ttl" name="tempat_tanggal_lahir" class="form-control" id="ttl" placeholder="Tempat Tanggal Lahir"
+								value="{{ data[5] }}" size="30" maxlength="50" />
+							</div>
+						<div class="form-group col-md-12">
+				    			<label for="jk">Jenis Kelamin</label>
+				     			<select id="jk" class="form-control" name="jenis_kelamin">
+				        		<option>Laki-Laki</option>
+				       			<option>Perempuan</option
+								value="{{data[6]}}" size="30" maxlength="50"/>
+							</option>
+						</select>
+					</div>
+						<div class="form-group col-md-12">
+								<label for="pekerjaan">Pekerjaan</label>
+								<input type="pekerjaan" name="pekerjaan" class="form-control" id="pekerjaan" placeholder="Pekerjaan"
+								value="{{data[7]}}" size="30" maxlength="50"/><br/>
+							<input type="hidden" name="no" value="{{ data [0] }}" />
+						<button type="submit" class="btn btn-primary">Simpan
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+</body>
+</html>

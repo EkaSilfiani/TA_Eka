@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Survei Jumantik</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-4.4.1-dist/css/bootstrap.min.css') }}">
+	<script src="{{ url_for('static', filename='bootstrap-4.4.1-dist/js/bootstrap.min.js') }}" type="text/javascript">
+	</script>
+	<link href="static/css/datepicker3.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+	<br>
+		<br>
+		<div class="square600">
+			<h2>Form Survei Jumantik</h2>
+			<br>
+				<br>
+				<form action="{{ url_for('insert_data_survei_jumantik') }}" method = "post" enctype="multipart/form-data">
+						<div class="form-group col--md-6">
+						<label for="inputno">No</label>
+						<input type="no" class="form-control" id="inputno" placeholder="No" />
+					</div>
+					<div class="form-group col-md--7">
+						<label for="tanggal">Tanggal Survei</label>
+						<input type="date" class="form-control" name="tanggal_survei" id="tanggal" placeholder="Tahun/Bulan/Tanggal" />
+					</div>
+					<div class="form-group col-md--8">
+						<label for="id_jumantik">ID Jumantik</label>
+						<input type="id_jumantik" class="form-control" name="id_jumantik" id="id_jumantik" placeholder="ID Jumantik" />
+					</div>
+					<div class="form-group col-md--9">
+						<label for="noKK">No Kartu Keluarga</label>
+						<input type="noKK" class="form-control" name="no_kk" id="noKK" placeholder="Nomor Kartu Keluarga" />
+					</div>
+					<div class="form-group col-md--10">
+						<label for="namakk">Nama Kepala Keluarga</label>
+						<input type="namakk" class="form-control" name="nama_kepala_keluarga" id="namakk" placeholder="Nama Kepala Keluarga" />
+					</div>
+					<div class="form-group col-md--11">
+						<label for="notelp">No Telp</label>
+						<input type="notelp" class="form-control" name="no_telp" id="notelp" placeholder="Nomor Telepon" />
+					</div>
+					<div class="form-group col-md--12">
+						<label for="alamat">Alamat</label>
+						<input type="alamat" class="form-control" name="alamat" id="alamat" placeholder="Rt/Rw/Dusun" />
+					</div>
+					<div class="form-group col-md--12">
+		    			<label for="bak_mandi">Bak Mandi</label>
+		     			<select id="bak_mandi" class="form-control" name="bak_mandi">
+		        		<option>Positif, Ya terdapat Jentik Nyamuk</option>
+		        		<option>Negativ, Tidak terdapat Jentik Nyamuk</option>
+		        		<option>Tidak ada</option>
+		        	</select>
+		       		</div>
+		       		<div class="form-group col-md--12">
+		    			<label for="drum">Drum</label>
+		     			<select id="drum" class="form-control" name="drum">
+		        		<option>Positif, Ya terdapat Jentik Nyamuk</option>
+		        		<option>Negativ, Tidak terdapat Jentik Nyamuk</option>
+		        		<option>Tidak ada</option>
+		        	</select>
+		       		</div>
+		       			<div class="form-group col-md--12">
+		    			<label for="kaleng_bekas">Kaleng Bekas</label>
+		     			<select id="kaleng_bekas" class="form-control" name="kaleng_bekas">
+		        		<option>Positif, Ya terdapat Jentik Nyamuk</option>
+		        		<option>Negativ, Tidak terdapat Jentik Nyamuk</option>
+		        		<option>Tidak ada</option>
+		        	</select>
+		       		</div>
+		       			<div class="form-group col-md--12">
+		    			<label for="tempayan">Tempayan</label>
+		     			<select id="tempayan" class="form-control" name="tempayan">
+		        		<option>Positif, Ya terdapat Jentik Nyamuk</option>
+		        		<option>Negativ, Tidak terdapat Jentik Nyamuk</option>
+		        		<option>Tidak ada</option>
+		        	</select>
+		       		</div>
+		       		<div class="form-group col-md--11">
+						<label for="lain_lain">Lain Lain</label>
+						<input type="lain_lain" class="form-control" name="lain_lain" id="lain_lain" placeholder="TPA Lain" />
+					</div>
+					<div class="form-group col-md--11">
+						<label for="status">Status</label>
+						<select id="status" class="form-control" name="status">
+		        		<option>Positif, Ya terdapat Jentik Nyamuk</option>
+		        		<option>Negativ, Tidak terdapat Jentik Nyamuk</option>
+		        		<option>Tidak ada</option>
+		        	</select>
+					</div>
+					<div class="form-group col-md--11">
+						<label for="jumlahtpa">Jumlah TPA</label>
+						<input type="jumlahtpa" class="form-control" name="jumlah_tpa" id="jumlahtpa" placeholder="Jumlah Tempat Penampungan Air"/>
+					</div>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Save</button>
+					<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLongTitle">Data Disimpan</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">Data Berhasil Disimpan
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Oke</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+	</body>
+</html>
